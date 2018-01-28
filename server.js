@@ -10,9 +10,9 @@ require('./config/database')
 
 var index = require('./routes/index');
 var bars = require('./routes/bars');
+var beers = require('./routes/beers');
 
 var app = express();
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/bars', bars);
+app.use('/beers', beers);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

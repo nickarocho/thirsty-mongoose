@@ -1,0 +1,23 @@
+<%- include('./../_partials/head') %>
+
+<a href="/bars">Back</a>
+<h2>Add a Bar</h2>
+<form action="/bars" method="post">
+    <label>Name:
+        <input type="text" name="name">
+    </label><br>
+    <label>Style
+        <select name="style">
+            <option value="Irish Pub">Irish Pub</option>
+            <option value="Hipster">Hipster</option>
+            <option value="Fancy">Fancy &nbsp; Overpriced</option>
+            <option value="Dive">Dive</option>
+        </select>
+    </label><br>
+    <br>
+    <input type="submit" value="Add Bar">
+</form>
+</body>
+</html>
+
+<%- include('./../_partials/footer') %>
